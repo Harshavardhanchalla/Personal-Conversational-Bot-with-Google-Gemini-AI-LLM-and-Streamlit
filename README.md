@@ -1,7 +1,5 @@
 # Harsha's-Personal-Conversational-Bot-with-Google-Gemini-AI-LLM-and-Streamlit
 
-# Conversational Bot with Google Gemini AI LLM and Streamlit
-
 This project leverages the Google Gemini AI LLM to create an interactive conversational bot using Streamlit. The bot uses the Generative AI model from Google to provide intelligent responses based on user input. The application is deployed on a Streamlit interface, providing a seamless and interactive user experience.
 
 ## Table of Contents
