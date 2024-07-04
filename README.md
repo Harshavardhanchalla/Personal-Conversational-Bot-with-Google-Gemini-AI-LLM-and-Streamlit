@@ -1,11 +1,5 @@
 # Harsha's-Personal-Conversational-Bot-with-Google-Gemini-AI-LLM-and-Streamlit
 
-### Project Title
-**Conversational Bot with Google Gemini AI LLM and Streamlit**
-
-### README.md
-
-```markdown
 # Conversational Bot with Google Gemini AI LLM and Streamlit
 
 This project leverages the Google Gemini AI LLM to create an interactive conversational bot using Streamlit. The bot uses the Generative AI model from Google to provide intelligent responses based on user input. The application is deployed on a Streamlit interface, providing a seamless and interactive user experience.
@@ -65,49 +59,31 @@ Follow these steps to set up the project on your local machine:
     - The bot will provide a response using the Google Gemini AI model.
 
 ## Code Explanation
-### Import Libraries and Configure API Key
-```python
-import streamlit as st
-import os
-import pathlib
-import textwrap
-from IPython.display import display, Markdown
+### Usage
 
-# Configure API key for Google Gemini
-os.environ['GEMINI_API_KEY'] = ''
-import google.generativeai as genai
-genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-```
+1. **Run the Streamlit app**:
+   - Open a terminal or command prompt.
+   - Navigate to the directory where the project is located.
 
-### Function to Load Google Gemini Model and Get Responses
-```python
-model = genai.GenerativeModel('gemini-pro')
-chat = model.start_chat(history=[])
-def get_gemini_response(question):
-    response = chat.send_message(question, stream=True)
-    return response
-```
+2. **Install Required Libraries**:
+   - Ensure you have Python installed on your machine.
+   - Install the necessary libraries listed in the `requirements.txt` file using pip. This includes libraries such as `streamlit`, `google.generativeai`, and others required for the project.
 
-### Initialize Streamlit App
-```python
-st.set_page_config(page_title="Conversational Bot")
+3. **Set Up Google Gemini API Key**:
+   - Obtain your Google Gemini API key.
+   - Set the API key as an environment variable. You can do this by creating a `.env` file in the project directory and adding your API key there.
 
-st.header("Harsha's Personal Gemini AI LLM ")
+4. **Run the Application**:
+   - In the terminal, run the Streamlit app using the `streamlit run` command followed by the name of the Python file (`app.py` in this case).
+   - Streamlit will start a local server and provide a URL (usually `http://localhost:8501`).
 
-input = st.text_input("Input: ", key="input")
+5. **Interact with the Bot**:
+   - Open your web browser and go to the provided URL.
+   - You will see a user interface where you can input your questions.
+   - Enter your question in the input field and click the button to get a response from the bot.
+   - The bot will process your question using the Google Gemini AI model and display the response in real-time.
 
-submit = st.button("Answer to your question")
-
-if submit:
-    response = get_gemini_response(input)
-    st.subheader("The Response is")
-    for chunk in response:
-        st.write(chunk.text)
-        st.write("_" * 80)
-    
-    st.write(chat.history)
-```
-
+By following these steps, you can easily set up and run the conversational bot on your local machine, leveraging the power of Google Gemini AI for intelligent interactions.
 ## Credits
 - **Author**: Harsha
 - **Mentor**: KODI PRAKASH SENAPATI
@@ -119,7 +95,6 @@ if submit:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
 
 ### Additional Notes:
 - Make sure to replace `Challa harsha Vradhan` with your actual GitHub username in the clone URL.
